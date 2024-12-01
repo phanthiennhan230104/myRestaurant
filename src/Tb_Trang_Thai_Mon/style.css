@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chef-mode {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 950px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+}
+
+.divider {
+    border: none; 
+    border-top: 2px solid #ccc; 
+    margin: 20px 0;
+    width: 100%; 
+}
+
+.left-panel {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.vertical-divider {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 2px;
+    height: calc(100% - 40px);
+    background-color: #ccc;
+}
+
+.left-panel h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 10px 0;
+}
+
+.chef-info-title {
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.chef-info {
+    margin-bottom: 20px;
+}
+
+.confirm-btn {
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.confirm-btn:hover {
+    background-color: #5db7e5;
+}
+
+.right-panel {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.right-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list {
+    background-color: rgb(175, 238, 255);
+    width: 660px;
+    height: 505px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.menu-list::-webkit-scrollbar {
+    width: 0; /* Ẩn thanh cuộn dọc */
+    background: transparent; /* Ẩn nền thanh cuộn */
+}
+.menu-item {
+    background-color: rgb(175, 238, 255);
+    width: 155px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.item-header {
+    background-color:rgb(51, 186, 224);
+    width: 140px;
+    height: 140px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+}
+
+.separator {
+    width: 80%; /* Độ dài đường gạch ngang */
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.quantity-btn {
+    background-color: #87CEEB;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    font-size: 18px;
+    color: black;
+}
+
+
+.item-status {
+    margin-bottom: 15px;
+}
+
+.item-status label {
+    margin-right: 5px;
+}
+
+.item-status select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.item-note {
+    width: 100%;
+}
+
+.item-note textarea {
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Dish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="vertical-divider"></div> <!-- Đường kẻ dọc -->
+            <h2>CHEF MODE</h2>
+            <hr class="divider"> <!-- Đường kẻ ngang dưới CHEF MODE -->
+            <div class="chef-info">
+                <p>Name: <strong>A</strong></p>
+                <p>Shift: <strong>Morning</strong></p>
+            </div>
+            <button class="confirm-btn">Confirm</button>
+        </div>
+    
+        <div class="right-panel">
+            <h2>DELETE DISH</h2>
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="dish-type">Dish Type:</label>
+                    <select id="dish-type" name="dish-type">
+                        <option value="food">Food</option>
+                        <option value="drink">Drink</option>
+                        <option value="combo">Combo</option>
+                    </select>
+                </div>
+                
+                <!-- Phần mã món cho phép nhập hoặc chọn từ danh sách thả xuống -->
+                <div class="form-group">
+                    <label for="dish-code">Dish Code (*):</label>
+                    <input list="dish-codes" id="dish-code" name="dish-code" placeholder="Enter or select dish code" oninput="updateDishInfo()">
+                    <datalist id="dish-codes">
+                        <option value="001">Beef Pho</option>
+                        <option value="002">Banh Mi</option>
+                        <option value="003">Milk Tea</option>
+                        <option value="004">Breakfast Combo</option>
+                    </datalist>
+                </div>
+    
+                <!-- Các trường tự động cập nhật khi mã món được nhập -->
+                <div class="form-group">
+                    <label for="dish-name">Dish Name (*):</label>
+                    <input type="text" id="dish-name" name="dish-name" placeholder="Enter dish name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="unit">Unit (*):</label>
+                    <input type="text" id="unit" name="unit" placeholder="Enter unit" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price (*):</label>
+                    <input type="text" id="price" name="price" placeholder="Enter price" readonly>
+                </div>
+    
+                <!-- Các lựa chọn xóa món nằm trên cùng một hàng -->
+                <div class="form-group checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" id="delete-permanently" name="delete-option" value="permanently">
+                        <label for="delete-permanently">Delete Permanently</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="temporarily-stop" name="delete-option" value="temporarily">
+                        <label for="temporarily-stop">Temporarily Stop Selling</label>
+                    </div>
+                </div>
+    
+                <!-- Các nút chức năng -->
+                <div class="form-buttons">
+                    <button class="confirm-btn">Exit</button>
+                    <button class="confirm-btn" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Giả lập dữ liệu menu có sẵn (có thể thay bằng dữ liệu thực từ cơ sở dữ liệu hoặc API)
+        const menuData = {
+            '001': { name: 'Beef Pho', unit: 'Bowl', price: '50,000 VND' },
+            '002': { name: 'Banh Mi', unit: 'Piece', price: '15,000 VND' },
+            '003': { name: 'Milk Tea', unit: 'Cup', price: '30,000 VND' },
+            '004': { name: 'Breakfast Combo', unit: 'Set', price: '80,000 VND' }
+        };
+
+        // Hàm cập nhật thông tin món ăn khi nhập mã món
+        function updateDishInfo() {
+            const dishCode = document.getElementById('dish-code').value;
+            const dishInfo = menuData[dishCode];
+
+            if (dishInfo) {
+                document.getElementById('dish-name').value = dishInfo.name;
+                document.getElementById('unit').value = dishInfo.unit;
+                document.getElementById('price').value = dishInfo.price;
+            } else {
+                // Xóa thông tin nếu mã món không có trong dữ liệu
+                document.getElementById('dish-name').value = '';
+                document.getElementById('unit').value = '';
+                document.getElementById('price').value = '';
+            }
+        }
+    </script>
+</body>
+</html>

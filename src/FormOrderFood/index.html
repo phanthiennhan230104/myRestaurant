@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="order-page">
+        <h2>ĐẶT BÀN</h2>
+
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Món ăn</th>
+                    <th>Giá bán</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="item-container">
+                        <img src="https://dattiecgiatot.com/admincp/san-pham/HinhAnh/331299781638.jpg" alt="Lẩu hải sản" width="100" height="100"/>
+                        <span> Lẩu hải sản chua cay </span>
+                    </td>
+                    <td>190.000 đ</td>
+                    <td>
+                        <button class="quantity-btn">-</button>
+                        <input type="text" value="2" class="quantity-input">
+                        <button class="quantity-btn">+</button>
+                    </td>
+                    <td>380.000 đ</td>
+                    <td><button class="delete-btn">🗑️</button></td>
+                </tr>
+                
+                
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="item-container">
+                        <img src="https://cdn.tgdd.vn/2021/04/CookProductThumb/r00-620x620.jpg" alt="salad" width="100" height="100" /> 
+                        <span> Salad tổng hợp </span>
+                    </td>
+                    <td>80.000 đ</td>
+                    <td>
+                        <button class="quantity-btn">-</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="quantity-btn">+</button>
+                    </td>
+                    <td>80.000 đ</td>
+                    <td><button class="delete-btn">🗑️</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <p>Tạm tính: <span>460.000 đ</span></p>
+            <p>Khuyến mãi: <span>0 đ</span></p>
+            <p><strong>Tổng cộng (VAT):</strong> <span class="total-price">460.000 đ</span></p>
+        </div>
+
+        <div class="actions">
+            <button class="continue-btn">Tiếp tục chọn món</button>
+            <button class="delete-all-btn">Xóa hết</button>
+            <button class="checkout-btn">Thanh toán</button>
+        </div>
+
+        <div class="reservation-form">
+            <h3>Thông tin đặt bàn</h3>
+            <form>
+                <select>
+                    <option>---Chọn nhà hàng---</option>
+                </select>
+                <input type="text" placeholder="Họ tên (*)">
+                <select>
+                    <option>---Chọn ngày---</option>
+                </select>
+                <input type="number" placeholder="Số khách (*)">
+                <input type="tel" placeholder="Số điện thoại (*)">
+                <select>
+                    <option>---Khung giờ---</option>
+                </select>
+                <textarea placeholder="Lời nhắn với nhà hàng"></textarea>
+                <button type="submit" class="submit-btn">Gửi đơn đặt bàn</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 950px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.vertical-divider {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 2px;
+    height: 560px;
+    background-color: #ccc;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 10px 0;
+}
+
+.left-panel h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chef-info {
+    margin-bottom: 20px;
+}
+
+.confirm-btn {
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.right-panel {
+    width: 70%;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #e6f7ff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group select {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: space-between; /* Sắp xếp các mục nằm ngang */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.confirm-btn {
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.order-page {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 950px; /* Changed width to 950px */
+    height: 650px; /* Added height of 650px */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+.quantity-btn {
+    padding: 5px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 30px;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.summary {
+    margin-bottom: 20px;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price {
+    font-weight: bold;
+    color: red;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.continue-btn {
+    background-color: #ddd;
+}
+
+.delete-all-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reservation-form {
+    margin-top: 20px;
+}
+
+.reservation-form h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+form input, form select, form textarea {
+    width: 48%; /* Adjusted for better spacing */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #e0a800;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-container span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img {
+    display: block;
+}
+
+.quantity-btn {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.item-container span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;
+}

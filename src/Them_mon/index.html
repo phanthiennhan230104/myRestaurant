@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Menu Item</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="vertical-divider"></div>
+            <h1>CHEF MODE</h1>
+            <hr class="divider">
+            <h3 class="chef-info-title">Chef Information</h3>
+            <div class="chef-info">
+                <p>Name: <strong>A</strong></p>
+                <p>Shift: <strong>Morning</strong></p>
+            </div>
+            <button class="confirm-btn">Confirm</button>
+        </div>
+
+        <div class="right-panel">
+            <h2>ADD MENU ITEM</h2>
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="dish-name">Dish Name:</label>
+                    <input type="text" id="dish-name" name="dish-name" placeholder="Enter dish name">
+                </div>
+                <div class="form-group">
+                    <label for="dish-type">Dish Type:</label>
+                    <select id="dish-type" name="dish-type">
+                        <option value="food">Món ăn</option>
+                        <option value="drink">Đồ uống</option>
+                        <option value="combo">Combo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="text" id="price" name="price" placeholder="Enter price">
+                </div>
+                <div class="form-group image-group">
+                    <label for="image-upload">Add Image:</label>
+                    <div class="image-input">
+                        <input type="file" id="image-upload" name="image-upload" accept="image/*" onchange="previewImage(event)">
+                        <div class="image-preview" id="image-preview"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Enter description"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('image-preview');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.style.backgroundImage = `url(${e.target.result})`;
+                    preview.style.backgroundSize = 'cover';
+                    preview.style.backgroundPosition = 'center';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.backgroundImage = 'none'; // Xóa hình ảnh nếu không có file
+            }
+        }
+    </script>
+</body>
+</html>

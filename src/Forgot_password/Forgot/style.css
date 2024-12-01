@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(224, 185, 151);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?cs=srgb&dl=pexels-pixabay-260922.jpg&fm=jpg);
+    background-size: cover; /* Hoặc contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 20px;
+}
+
+.container {
+    border: 1px solid rgb(101, 100, 100);
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 245, 245, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.forgot-password-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forgot-password-form p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forgot-password-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.forgot-password-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.forgot-password-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #f1840e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.forgot-password-form button:hover {
+    background-color: #f1840e;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #13110f;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

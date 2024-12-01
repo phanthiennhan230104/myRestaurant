@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 950px; 
+    height: 600px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    width: 30%;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px 0 0 10px; /* Bo góc cho bên trái */
+    margin-right: -2px; /* Điều chỉnh khoảng cách giữa đường kẻ và khung bên phải */
+    padding-top: 20px; /* Khoảng cách trên */
+    padding-bottom: 20px; /* Khoảng cách dưới */
+    position: relative; /* Thêm position để dễ dàng đặt đường kẻ dọc */
+}
+
+.vertical-divider {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 35px; /* Đặt vị trí từ trên xuống */
+    right: 0; /* Đặt ở bên phải */
+    width: 2px; /* Độ rộng đường kẻ */
+    height: 540px; /* Chiều cao đường kẻ */
+    background-color: #ccc; /* Màu đường kẻ */
+}
+.left-panel h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.divider {
+    border: none; /* Không có đường viền mặc định */
+    border-top: 2px solid #ccc; /* Đường kẻ ngang */
+    margin: 10px 0; /* Khoảng cách trên và dưới đường kẻ */
+}
+
+.chef-info-title {
+    text-align: center; /* Căn giữa chữ */
+    text-decoration: underline; /* Gạch chân */
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+}
+
+.chef-info {
+    margin-bottom: 20px;
+}
+
+.confirm-btn {
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    padding: 15px; /* Button padding */
+    width: 100%;
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer;
+    font-size: 18px; /* Button font size */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.confirm-btn:hover {
+    background-color: #5db7e5; /* Màu khi hover */
+}
+
+.right-panel {
+    width: 70%;
+    padding: 20px; /* Padding cho khung bên phải */
+    border-radius: 0 10px 10px 0; /* Bo góc cho bên phải */
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #e6f7ff; /* Màu nền xanh nhạt cho khung chứa thông tin */
+    padding: 40px; /* Điều chỉnh padding */
+    border-radius: 10px; /* Bo góc cho khung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0px 5px 5px 0px; 
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px; /* Font size for labels */
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bo góc cho input và textarea */
+}
+
+.image-group {
+    display: flex;
+    align-items: center;
+}
+
+.image-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.image-input input[type="file"] {
+    flex: 1; /* Make the input take up available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bo góc cho input file */
+    margin-right: 10px; /* Space between file input and preview */
+}
+
+.image-preview {
+    width: 60px; 
+    height: 60px;
+    background-color: #e6e6e6; /* Light gray background */
+    border-radius: 4px; /* Bo góc cho khung xem trước */
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Center the image */
+}
+
+textarea {
+    resize: vertical;
+    margin-top: 5px;
+}

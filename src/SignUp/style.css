@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(224, 185, 151);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?cs=srgb&dl=pexels-pixabay-260922.jpg&fm=jpg);
+    background-size: cover; /* Hoặc contain */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+h2{
+    margin: 20px;
+}
+
+.account-new input{
+    width: 250px;
+    padding: 15px;
+    margin: 7px;
+    border-radius: 30px;
+    border: 1px solid rgb(187, 179, 179);
+}
+
+.form__tos{
+    max-width: max-content;
+    margin: 10px;
+}
+
+.button input{
+    border: 1px solid rgb(222, 33, 12);
+    margin: 10px;
+    width: 150px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: rgb(245, 78, 27);
+    color: white;
+}
+
+.button{
+    display: flex;
+    margin:0 5px;
+}
+
+.sign-up-button {
+    margin-right: 5px; 
+    padding: 10px;
+}
+  
+.reset-button {
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+  
+.exit-button {
+    margin-left: 5px; 
+}
+
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__tos{
+    margin: 10px;
+    forn-size: 10px;
+}
+
+.SignUpForm{
+    border: 1px solid rgb(101, 100, 100);
+    border-radius: 20px;
+    width: 700px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 245, 245, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+

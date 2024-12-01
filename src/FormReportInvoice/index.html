@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT REVENUE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container chính -->
+    <div class="container">
+        <div class="sidebar">
+            <h2>REPORT</h2>
+            <hr class="divider">
+            <div class="info">
+                <h3 class="info-title">Information Cashier</h3> <!-- Tuỳ Chọn 1 -->
+                <p><strong>Name:</strong> A</p>
+                <p><strong>Shift:</strong> Morning</p>
+            </div>
+            <button class="exit-btn">Exit</button>
+        </div>
+        
+        <div class="report">
+            <h2>REPORT REVENUE</h2>
+            
+            
+            <div class="report-wrapper">
+                <div class="date-picker">
+                    <label for="date">DATE: </label>
+                    <input type="date" id="date">
+                </div>
+            
+                <!-- Bảng doanh thu -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ordinal Number</th>
+                            <th>Dish Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dish A</td>
+                            <td>70.000</td>
+                            <td>2</td>
+                            <td>140.000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dish B</td>
+                            <td>65.000</td>
+                            <td>1</td>
+                            <td>65.000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Dish C</td>
+                            <td>90.000</td>
+                            <td>2</td>
+                            <td>180.000</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Dish D</td>
+                            <td>120.000</td>
+                            <td>3</td>
+                            <td>360.000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total:</td>
+                            <td>8</td>
+                            <td>745.000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+                
+        </div>
+    </div>
+
+</body>
+</html>

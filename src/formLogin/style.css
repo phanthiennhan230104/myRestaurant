@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(224, 185, 151);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?cs=srgb&dl=pexels-pixabay-260922.jpg&fm=jpg);
+    background-size: cover; /* Hoặc contain */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2{
+    margin: 20px;
+}
+
+.username-pass input{
+    width: 250px;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 30px;
+    border: 1px solid rgb(187, 179, 179);
+}
+
+.forgot-pass{
+    max-width: max-content;
+    margin: 10px;
+}
+
+.button-login input{
+    border: 1px solid rgb(222, 33, 12);
+    margin: 20px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(245, 78, 27);
+    color: white;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    border: 1px solid rgb(101, 100, 100);
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 245, 245, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.forgot-pass a{
+    color: black;
+}
+
+.button-login input:hover{
+    border: 1px solid rgb(225, 33, 12);
+    background-color: rgb(237, 21, 5);
+    cursor: pointer;
+}
+
+

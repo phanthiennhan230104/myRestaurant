@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="choose-table">
+        <div class="left-content">
+            <div class="menu-icon">
+                <img src="https://cdn.icon-icons.com/icons2/1129/PNG/512/menubuttonofthreelines_79781.png" alt="Menu icon" width="20" height="30">
+            </div>
+            <div class="profile-icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/2522/2522138.png" alt="Profile Icon" width="30" height="30">
+            </div>
+            <div class="logo">SELF RESTAURANT</div>
+            <hr class="divider-line">
+        </div>
+        <main>
+            <h1><b>ADD ACCOUNT</b></h1>
+            <div class="account-list">
+                <div class="form-group">
+                    <label for="username">Name account</label>
+                    <input type="text" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="" onfocus="if(this.value === '•••••••••••') { this.value = ''; this.style.color='black'; }" onblur="if(this.value === '') { this.value = '•••••••••••'; this.style.color='gray';}" value="•••••••••••" style="color: gray;">
+                </div>
+                <div class="form-group">
+                    <label for="rePassword">Re-enter password</label>
+                    <input type="password" id="rePassword" name="rePassword" placeholder="" value="•••••••••••" onfocus="if(this.value === '•••••••••••') { this.value = ''; this.style.color='black';}" onblur="if(this.value === '') { this.value = '•••••••••••'; this.style.color='gray'; }" style="color: gray;">
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Fullname">
+                </div>
+                <div class="form-group">
+                    <label for="sex">Sex</label> 
+                    <select id="sex" name="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="text" id="birthday" name="birthday" placeholder="_ _/_ _/_ _ _ _" maxlength="10" oninput="formatDate(this)" style="color: black;">
+                </div>
+                <div class="form-group">
+                    <div class="invoice-button" onclick="exitForm()">Exit</div>
+                    <div class="invoice-button" id="resetButton" onclick="resetForm()">Reset</div>
+                    <div class="invoice-button">Save</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function formatDate(input) {
+            var value = input.value.replace(/\D/g, '');
+            if (value.length > 2 && value.length <= 4) {
+                value = value.slice(0, 2) + '/' + value.slice(2);
+            } else if (value.length > 4) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4) + '/' + value.slice(4);
+            }
+            input.value = value;
+        }
+
+        // Hàm để đặt lại tất cả các trường nhập liệu
+        function resetForm() {
+            document.getElementById("username").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "•••••••••••";
+            document.getElementById("password").style.color = "gray";
+            document.getElementById("rePassword").value = "•••••••••••";
+            document.getElementById("rePassword").style.color = "gray";
+            document.getElementById("fullName").value = "";
+            document.getElementById("sex").value = "male";
+            document.getElementById("birthday").value = "";
+        }
+
+        // Hàm để thoát (ví dụ minh họa)
+        function exitForm() {
+            alert("Exiting form...");
+            // Bạn có thể điều hướng hoặc thực hiện hành động khác ở đây
+        }
+    </script>
+</body>
+</html>

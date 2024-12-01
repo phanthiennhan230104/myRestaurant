@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.choose-table{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 950px;
+    height: 650px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    padding: 0px;
+}
+
+.left-content{
+    margin: 20px 20px 20px 0px;
+    max-width: max-content;
+    height: 608px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid rgb(114, 106, 106);
+}
+
+.left-content > *{
+    margin: 15px;
+}
+
+.menu-icon {
+    display: block;
+    gap: 100px;
+    margin-left: -150px;
+}
+
+.logo {
+    font-size: 23px;
+    align-items: center;
+    font-weight: bold;
+    margin-top: -30px;
+    text-shadow: 2px 8px 4px rgba(0, 0, 0, 0.3);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profile-icon img {
+    display: block;
+    margin-top: -60px;
+    margin-left: 170px;
+}
+
+.divider-line {
+    width: 90%; 
+    height: 2px; 
+    background-color: rgb(122, 115, 115); 
+    border: none; 
+    margin: 15px 0; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    width: 70%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.account-list {
+    background-color: #96d8f1;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%; 
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    background-color: white; 
+    justify-content: flex-start;
+    border: 1px solid #ccc; 
+    padding: 7px;
+    border-radius: 15px; 
+    font-size: 18px;
+    text-align: left;
+    width: 55%; /* Để phù hợp với chiều rộng của cột */
+}
+
+input[type="password"]{
+    background-color: white; 
+    justify-content: flex-start;
+    border: 1px solid #ccc; 
+    padding: 7px;
+    border-radius: 15px; 
+    font-size: 18px;
+    text-align: left;
+    width: 55%; 
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 15px; /* Khoảng cách giữa các nhóm */
+    width: 100%;
+}
+
+.form-group select {
+    width: 55%;
+    padding: 7px;
+    margin: 5px ;
+    border: 1px solid #ccc;
+    border-radius: 15px; 
+    font-size: 18px;
+    color: gray;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 23px;
+    justify-content: flex-start;
+    text-align: left;
+    color: black;
+    padding-left: 20px; 
+    margin-right: 30px;
+}
+
+.invoice-button{
+    background-color: #e7eced;
+    padding: 8px;
+    justify-content: flex-start;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width:50%; 
+    max-width: 120px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.invoice-button:hover {
+    background-color: #62b5de; 
+}
+
+

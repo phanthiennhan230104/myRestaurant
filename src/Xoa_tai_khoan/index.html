@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="choose-table">
+        <div class="left-content">
+        <div class="menu-icon">
+            <img src="https://cdn.icon-icons.com/icons2/1129/PNG/512/menubuttonofthreelines_79781.png" alt="Menu icon" width="20" height="30">
+        </div>
+        <div class="profile-icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/2522/2522138.png" alt="Profile Icon" width="30" height="30">
+        </div>
+        <div class="logo"> SELF RESTAURANT
+        </div>
+        <hr class="divider-line">
+    </div>
+    <main>
+        <h1><b>DELETE ACCOUNT</b></h1>
+        <div class="account-list">
+                <div class="form-group">
+                    <label for="username">Account name to delete</label>
+                    <input type="text" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Account holder name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Fullname">
+                </div>
+                <div class="form-group">
+                    <label for="Lido">Reason for deletion</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lydo1" name="lydo1">
+                            <label for="lydo1">Personal leave</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lydo2" name="lydo2">
+                            <label for="lydo2">Use new account</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lydo3" name="lydo3">
+                            <label for="lydo3">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="invoice-button" onclick="exitForm()">Exit</div>
+                    <div class="invoice-button" id="resetButton" onclick="resetForm()">Reset</div>
+                    <div class="invoice-button">Save</div>
+                </div>
+        </div>
+    </main>
+        <script>
+            function resetForm() {
+                document.getElementById("username").value = "";
+                document.getElementById("fullname").value = "";
+                document.getElementById("lydo1").checked = false;
+                document.getElementById("lydo2").checked = false;
+                document.getElementById("lydo3").checked = false;
+            }
+        </script>
+</body>     
